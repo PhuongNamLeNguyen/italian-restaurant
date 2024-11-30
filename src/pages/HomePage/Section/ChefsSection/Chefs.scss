@@ -1,0 +1,63 @@
+@use "../../../../scss/utilities" as *;
+
+.home {
+    .chefs {
+        .container {
+            .chefs {
+                &__heading {
+                    @include h2-dt;
+                    text-align: center;
+                }
+                &__desc {
+                    margin: 16px 0 40px;
+                    position: relative;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    max-width: 760px;
+                    color: $linkColor;
+                    text-align: center;
+                }
+                &__list {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    gap: 30px;
+                    .chef {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        &__img {
+                            width: 100%;
+                            img {
+                                width: 100%;
+                                height: 100%;
+                                object-fit: cover;
+                            }
+                        }
+                        &__name {
+                            @include h4-dt;
+                            margin-top: 30px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 992px) {
+    .home {
+        .chefs {
+            .container {
+                .chefs {
+                    &__heading {
+                        @include h2-mb;
+                    }
+                    &__list {
+                        flex-direction: column;
+                    }
+                }
+            }
+        }
+    }
+}

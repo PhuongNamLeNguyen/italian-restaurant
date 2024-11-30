@@ -1,0 +1,98 @@
+const general = {
+    slogan: "We do not cook, we create your emotions!",
+    openYear: 2000,
+    restaurantsCount: 6,
+    foodsCount: 68,
+    headChef: "Giovanni Rossi",
+    location: "123 Italian St., Rome, Italy",
+    openingHour: "11am",
+    closingHour: "11pm",
+    dayOff: "Monday",
+    openingTimes: [
+        { day: "Mon", times: "17:00 to 23:00" },
+        { day: "Tue", times: "18:00 to 23:00" },
+        { day: "Wed", times: "18:00 to 23:00" },
+        { day: "Thu", times: "18:00 to 23:00" },
+        { day: "Fri", times: "18:00 to 23:00" },
+        { day: "Sat/Sun", times: "20:00 to 04:00" },
+    ],
+    chefs: [
+        { name: "Jubed Ahmed", job: "Chef", image: "./img/chefs/chef-1.png" },
+        {
+            name: "Delwar Hussen",
+            job: "Assisten Chef",
+            image: "./img/chefs/chef-2.png",
+        },
+        { name: "Tajul Islam", job: "Chef", image: "./img/chefs/chef-3.png" },
+    ],
+    specialties: [
+        "Authentic Italian Cuisine",
+        "Handcrafted Pasta",
+        "Gourmet Pizzas",
+    ],
+    mission:
+        "To bring the authentic taste of Italy to every table with passion and excellence.",
+    contactInfo: {
+        address: "Avenue Marina 34568 NY (U.S)",
+        email: "info@italianrestaurant.com",
+        website: "www.italianrestaurant.com",
+        phone: "+39 06 1234567",
+    },
+    socialMedia: {
+        facebook: "https://www.facebook.com/italianrestaurant",
+        instagram: "https://www.instagram.com/italianrestaurant",
+        twitter: "https://www.twitter.com/italianrestaurant",
+    },
+    restaurants: [
+        {
+            id: 1,
+            name: "La Dolce Vita",
+            address: "456 Via Roma, Rome, Italy",
+            phone: "+39 06 2345678",
+            hours: "Mon-Sun 11am - 11pm",
+            specialties: ["Wood-Fired Pizza", "Fresh Seafood"],
+        },
+        {
+            id: 2,
+            name: "Trattoria Bella Napoli",
+            address: "789 Piazza Navona, Rome, Italy",
+            phone: "+39 06 3456789",
+            hours: "Mon-Sun 12pm - 10pm",
+            specialties: ["Traditional Pasta", "Homemade Gelato"],
+        },
+        {
+            id: 3,
+            name: "Ristorante Il Gusto",
+            address: "101 Via del Corso, Rome, Italy",
+            phone: "+39 06 4567890",
+            hours: "Mon-Sun 10am - 10pm",
+            specialties: ["Fine Dining", "Award-Winning Wines"],
+        },
+        {
+            id: 4,
+            name: "Pizzeria Margherita",
+            address: "202 Via della Croce, Rome, Italy",
+            phone: "+39 06 5678901",
+            hours: "Mon-Sun 12pm - 11pm",
+            specialties: ["Classic Margherita Pizza", "Tiramisu"],
+        },
+        {
+            id: 5,
+            name: "Osteria da Vinci",
+            address: "303 Via dei Fori Imperiali, Rome, Italy",
+            phone: "+39 06 6789012",
+            hours: "Mon-Sun 11am - 10pm",
+            specialties: ["Gourmet Pasta", "Seasonal Dishes"],
+        },
+        {
+            id: 6,
+            name: "Enoteca del Vino",
+            address: "404 Via delle Quattro Fontane, Rome, Italy",
+            phone: "+39 06 7890123",
+            hours: "Mon-Sun 12pm - 9pm",
+            specialties: ["Wine Pairings", "Italian Cheese"],
+        },
+    ],
+};
+
+export default general;

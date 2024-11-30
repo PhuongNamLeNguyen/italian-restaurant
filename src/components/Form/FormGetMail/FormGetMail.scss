@@ -1,0 +1,23 @@
+@use "../../../scss/utilities" as *;
+
+.form-get-mail {
+    width: 100%;
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid $textColor;
+    input[type="email"] {
+        height: 50px;
+        width: 80%;
+        outline: none;
+        background-color: transparent;
+        &::placeholder {
+            color: $textColor;
+            font-weight: 200;
+            position: relative;
+        }
+    }
+    button.submit {
+        height: 26px;
+    }
+}

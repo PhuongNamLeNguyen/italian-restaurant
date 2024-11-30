@@ -1,0 +1,70 @@
+@use "../../../../scss/utilities" as *;
+
+.home {
+    .popular {
+        &__heading {
+            text-align: center;
+            @include h2-dt;
+        }
+        &__desc {
+            margin: 20px 0 60px;
+            position: relative;
+            left: 50%;
+            transform: translateX(-50%);
+            text-align: center;
+            max-width: 600px;
+        }
+        .row {
+            display: flex;
+            justify-content: space-between;
+        }
+        .food {
+            &__name,
+            &__price {
+                @include h4-dt;
+                font-size: 2.4rem;
+            }
+            &__desc {
+                color: $linkColor;
+                margin: 6px 0 16px;
+            }
+            &__link {
+                display: inline-block;
+                // padding: 10px 0;
+                border-bottom: 1px solid $primaryColor;
+            }
+        }
+        &__link {
+            position: relative;
+            left: 50%;
+            transform: translateX(-50%);
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            margin-top: 30px;
+            color: $primaryColor;
+            border-bottom: 1px solid $primaryColor;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .home {
+        .popular {
+            &__heading {
+                @include h2-mb;
+            }
+            &__desc {
+                font-size: 1.4rem;
+                margin: 12px 0 30px;
+            }
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    .home {
+        .popular {
+        }
+    }
+}

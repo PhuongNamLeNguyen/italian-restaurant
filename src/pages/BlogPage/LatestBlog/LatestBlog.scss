@@ -1,0 +1,63 @@
+@use "../../../scss/utilities" as *;
+
+.blog {
+    .latest-blog {
+        padding: 50px 0;
+        .container {
+            display: grid;
+            grid-template-columns: 7fr 5fr;
+            grid-column-gap: 30px;
+        }
+        &__img-box {
+            width: 100%;
+            height: 100%;
+            border: 1px solid $linkColor;
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+        &__text-box {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 20px;
+            .row {
+                display: flex;
+                align-items: center;
+                gap: 40px;
+                color: $linkColor;
+                span {
+                    &:first-child {
+                        position: relative;
+                        &::after {
+                            position: absolute;
+                            top: 50%;
+                            right: -20px;
+                            transform: translate(50%, -50%);
+                            content: "";
+                            width: 8px;
+                            height: 8px;
+                            background-color: $linkColor;
+                            border-radius: 50%;
+                        }
+                    }
+                }
+            }
+        }
+        &__heading {
+            @include h3-dt;
+        }
+        &__desc {
+            color: $linkColor;
+        }
+        &__link {
+            display: flex;
+            a {
+                padding: 6px 0;
+                border-bottom: 1px solid $primaryColor;
+            }
+        }
+    }
+}

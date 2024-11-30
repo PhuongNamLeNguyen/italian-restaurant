@@ -1,0 +1,50 @@
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 26px;
+
+    box-sizing: border-box;
+
+    background-color: #111114;
+    color: #ffffff;
+
+    text-wrap: pretty;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+    text-decoration: none;
+    font: inherit;
+    color: inherit;
+}
+
+input,
+button,
+textarea,
+select,
+option {
+    font: inherit;
+    border: none;
+    outline: none;
+    color: inherit;
+}
+
+button {
+    background: transparent;
+    display: inline-block;
+    padding: 0;
+    cursor: pointer;
+}
+
+.container {
+    box-sizing: border-box;
+    width: 1170px;
+    max-width: calc(100% - 48px);
+    margin: 0 auto;
+}

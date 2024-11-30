@@ -1,0 +1,19 @@
+@use "../../scss/utilities" as *;
+
+.blog {
+    margin-top: 50px;
+
+    & > .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 28px;
+        border-top: 1px solid $linkColor;
+        border-bottom: 1px solid $linkColor;
+    }
+    &__heading {
+        @include h2-dt;
+        font-size: 5.6rem;
+        text-align: center;
+    }
+}

@@ -1,0 +1,9 @@
+@use "../../scss/utilities" as *;
+
+.rating-stars {
+    background-color: $primaryColor;
+
+    mask-image: url(../../../public/icon/i-fill-star.svg);
+    mask-repeat: repeat-x;
+    mask-position: start;
+}

@@ -1,0 +1,107 @@
+@use "../../../../scss/utilities" as *;
+
+.home {
+    .opening {
+        .container {
+            position: relative;
+            display: flex;
+            align-items: stretch;
+            justify-items: center;
+        }
+        &__contact {
+            position: relative;
+            padding: 70px 0;
+            flex: 0 0 50%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            border: 1px solid #fff;
+            .content {
+                position: relative;
+            }
+            ul {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 10px;
+            }
+            .background-img {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                &::before {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    content: "";
+                    width: 100%;
+                    height: 100%;
+                    background-color: #111114e6;
+                }
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+        }
+        &__times {
+            background-color: $primaryColor;
+            color: $bgColor;
+            border: 1px solid $primaryColor;
+            padding: 70px 0;
+            flex: 0 0 50%;
+            ul {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 10px;
+                li {
+                    width: 60%;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                }
+            }
+        }
+        .label {
+            text-align: center;
+            @include h4-dt;
+            margin-bottom: 30px;
+        }
+    }
+}
+
+// Responsive
+@media (max-width: 768px) {
+    .home {
+        .opening {
+            .container {
+                flex-direction: column;
+            }
+            &__times {
+                ul {
+                    li {
+                        width: 50%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    .home {
+        .opening {
+            &__times {
+                ul {
+                    li {
+                        width: 80%;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,72 @@
+@use "../../../../scss/utilities" as *;
+
+.home {
+    .stats {
+        position: relative;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        &::before {
+            position: absolute;
+            top: 0;
+            left: 0;
+            content: "";
+            width: 100%;
+            height: 100%;
+            background-color: #111114d1;
+        }
+        .container {
+            position: relative;
+            .list {
+                padding: 60px 0;
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                .item {
+                    display: flex;
+                    align-items: center;
+                    gap: 20px;
+                    span:first-child {
+                        @include h2-dt;
+                    }
+                    span:last-child {
+                        max-width: 170px;
+                        font-family: "Libre Bodoni", serif;
+                        font-weight: 500;
+                        font-size: 2.4rem;
+                        line-height: 1.4;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Responsive
+@media (max-width: 992px) {
+    .home {
+        .stats {
+            .container {
+                .list {
+                    justify-content: space-between;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .home {
+        .stats {
+            background-size: 150%;
+            background-position: left;
+            .container {
+                .list {
+                    padding: 50px 0;
+                    flex-direction: column;
+                    gap: 30px;
+                }
+            }
+        }
+    }
+}

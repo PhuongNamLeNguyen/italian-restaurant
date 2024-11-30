@@ -1,0 +1,42 @@
+@use "./variables" as *;
+
+$textColor: $white-01;
+$linkColor: $white-01-80;
+$linkColorActive: $orange-01;
+
+@mixin textStyles($font-size: 16px, $font-weight: 400, $line-height: 1.625) {
+    font-size: $font-size;
+    font-weight: $font-weight;
+    line-height: $line-height;
+}
+
+// Heading
+@mixin h1-dt() {
+    @include textStyles(11rem, 700, 1);
+    font-family: "Libre Bodoni", serif;
+}
+
+@mixin h2-dt() {
+    @include textStyles(6.4rem, 500, 1.15625);
+    font-family: "Libre Bodoni", serif;
+}
+
+@mixin h3-dt() {
+    @include textStyles(4rem, 500, 1.25);
+    font-family: "Libre Bodoni", serif;
+}
+
+@mixin h4-dt() {
+    @include textStyles(3rem, 500, 1.33);
+    font-family: "Libre Bodoni", serif;
+}
+
+@mixin h1-mb() {
+    @include textStyles(3.6rem, 700, 1.44);
+    font-family: "Libre Bodoni", serif;
+}
+
+@mixin h2-mb() {
+    @include textStyles(3.6rem, 500, 1.44);
+    font-family: "Libre Bodoni", serif;
+}

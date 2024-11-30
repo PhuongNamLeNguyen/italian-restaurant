@@ -1,0 +1,121 @@
+@use "../../../../scss/utilities" as *;
+
+.home {
+    .reserve {
+        .container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            .reserve {
+                &__text-box {
+                    box-sizing: border-box;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-evenly;
+                    background-color: $primaryColor;
+                    color: $bgColor;
+                    padding: 40px;
+                    .reserve {
+                        &__heading {
+                            @include h3-dt;
+                        }
+                    }
+                    .form {
+                        display: flex;
+                        flex-wrap: wrap;
+                        align-items: center;
+                        margin: 40px 0;
+                        gap: 20px;
+                        &__group {
+                            display: grid;
+                            grid-template-columns: 1fr auto;
+                            grid-template-rows: auto auto;
+                            align-items: center;
+                        }
+                        &__label {
+                            text-align: center;
+                            font-family: "Libre Bodoni", serif;
+                        }
+                        &__input {
+                            text-align: center;
+                            width: 80px;
+                            background-color: transparent;
+                            border: none;
+                            @include h3-dt;
+                        }
+                        &__arrow {
+                            position: relative;
+                            top: 10px;
+                            grid-column: 2 / 3;
+                            grid-row: 1 / -1;
+                            width: 15px;
+                            display: flex;
+                            flex-direction: column-reverse;
+                            align-items: flex-end;
+                            gap: 10px;
+                            img {
+                                cursor: pointer;
+                            }
+                        }
+                    }
+                }
+                &__img-box {
+                    height: 400px;
+                    position: relative;
+                    &::after {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        content: "";
+                        width: 100%;
+                        height: 100%;
+                        background-color: #111114c9;
+                    }
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 992px) {
+    .home {
+        .reserve {
+            .container {
+                .reserve {
+                    &__img-box {
+                        align-self: stretch;
+                        height: auto;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .home {
+        .reserve {
+            .container {
+                grid-template-columns: repeat(1, auto);
+                grid-template-rows: 1fr 300px;
+                .reserve {
+                    &__text-box {
+                        padding: 30px;
+                        .reserve {
+                            &__heading {
+                                @include h2-mb;
+                            }
+                        }
+                        .form {
+                            margin: 20px 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,108 @@
+@use "../../../../scss/utilities" as *;
+
+.home {
+    .blog {
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            .blog {
+                &__heading {
+                    @include h2-dt;
+                    margin: 20px 0 60px;
+                }
+                &__list {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 60px;
+                    .item {
+                        display: flex;
+                        align-items: center;
+                        gap: 30px;
+                        &:last-child {
+                            flex-direction: row-reverse;
+                        }
+                        &__img {
+                            flex: 0 0 calc((100% - 30px) / 2);
+                            height: 350px;
+                            img {
+                                width: 100%;
+                                height: 100%;
+                                object-fit: cover;
+                            }
+                        }
+                        &__details {
+                            flex: 0 0 calc((100% - 30px) / 2);
+
+                            .title {
+                                @include h4-dt;
+                                margin: 20px 0;
+                            }
+                            .row {
+                                display: flex;
+                                align-items: center;
+                                gap: 30px;
+                                margin: 30px 0;
+                                strong {
+                                    color: $primaryColor;
+                                    font-weight: 500;
+                                }
+                            }
+                            .link {
+                                border-bottom: 1px solid $primaryColor;
+                                padding: 8px 0;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .home {
+        .blog {
+            .container {
+                .blog {
+                    &__heading {
+                        @include h2-mb;
+                        margin: 0 0 20px;
+                    }
+                    &__list {
+                        flex-direction: column;
+                        .item {
+                            flex-direction: column;
+                            &__img {
+                                flex: 1 0 auto;
+                                width: 100%;
+                                height: 450px;
+                            }
+                            &:last-child {
+                                flex-direction: column;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    .home {
+        .blog {
+            .container {
+                .blog {
+                    &__list {
+                        .item {
+                            &__img {
+                                height: 300px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

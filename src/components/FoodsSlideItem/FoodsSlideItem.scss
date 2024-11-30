@@ -1,0 +1,61 @@
+@use "../../scss/utilities" as *;
+
+.foods-slide__item {
+    .row {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .food {
+        &__img {
+            width: 370px;
+            height: 370px;
+            margin-bottom: 16px;
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+        &__name,
+        &__price {
+            @include h4-dt;
+            font-size: 2.4rem;
+        }
+        &__desc {
+            color: $linkColor;
+            margin: 6px 0 16px;
+        }
+        &__link {
+            display: inline-block;
+            // padding: 10px 0;
+            border-bottom: 1px solid $primaryColor;
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    .foods-slide__item {
+        .row {
+            padding: 0 20px;
+        }
+        .food {
+            &__desc {
+                padding: 0 20px;
+            }
+        }
+    }
+}
+
+@media (max-width: 400px) {
+    .foods-slide__item {
+        .row {
+            padding: 0 40px;
+        }
+        .food {
+            &__desc {
+                padding: 0 40px;
+            }
+        }
+    }
+}

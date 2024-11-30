@@ -1,0 +1,41 @@
+@use "../../../../scss/utilities" as *;
+
+.home {
+    .banner {
+        background-color: $primaryColor;
+        .container {
+            padding: 40px 0;
+            overflow: hidden;
+            .banner__list {
+                display: flex;
+                gap: 100px;
+                align-items: center;
+                animation: bannerSlide 8s linear infinite;
+                .item {
+                    flex: 1 0 auto;
+                    display: flex;
+                    align-items: center;
+                    gap: 18px;
+                    &__img {
+                        width: 56px;
+                        height: 56px;
+                    }
+                    &__label {
+                        @include h3-dt;
+                        color: $bgColor;
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@keyframes bannerSlide {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-150%);
+    }
+}

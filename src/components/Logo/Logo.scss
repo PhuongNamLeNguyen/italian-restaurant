@@ -1,0 +1,14 @@
+@use "../../scss/utilities" as *;
+
+.logo {
+    display: flex;
+    align-items: center;
+    height: 60px;
+    width: 60px;
+    gap: 6px;
+    img {
+        &:last-child {
+            margin-top: 4px;
+        }
+    }
+}

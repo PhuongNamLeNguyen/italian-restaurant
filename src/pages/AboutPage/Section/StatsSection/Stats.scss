@@ -1,0 +1,62 @@
+@use "../../../../scss/utilities" as *;
+
+.about {
+    .stats {
+        background-color: $primaryColor;
+        .container {
+            padding: 42px 0;
+        }
+        &__list {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            .item {
+                flex: 1 0;
+                display: flex;
+                flex-direction: column-reverse;
+                justify-content: center;
+                align-items: center;
+                span {
+                    color: $bgColor;
+                    text-align: center;
+                    &:first-child {
+                        @include h4-dt;
+                        font-size: 2.4rem;
+                    }
+                    &:last-child {
+                        @include h2-dt;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 992px) {
+    .about {
+        .stats {
+            .container {
+                padding: 20px 0;
+            }
+            &__list {
+                flex-wrap: wrap;
+                .item {
+                    padding: 20px 0;
+                    flex: 1 0 50%;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    .about {
+        .stats {
+            &__list {
+                .item {
+                    flex: 1 0 100%;
+                }
+            }
+        }
+    }
+}

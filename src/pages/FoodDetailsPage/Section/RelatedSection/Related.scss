@@ -1,0 +1,10 @@
+@use "../../../../scss/utilities" as *;
+
+.food-details {
+    .related {
+        &__heading {
+            @include h4-dt;
+            margin-bottom: 40px;
+        }
+    }
+}
