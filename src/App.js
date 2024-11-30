@@ -27,7 +27,7 @@ const pages = [
 
 function App() {
     return (
-        <Router>
+        <Router basename="/">
             <ScrollToTop></ScrollToTop>
             <Routes>
                 <Route path="/" element={<RootLayout pages={pages} />}>
